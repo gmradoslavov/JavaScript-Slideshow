@@ -1,0 +1,36 @@
+<script>
+	var i = 0; // Start point
+	var images = [];
+	var time = 2000;
+
+	// Image List
+	images[0] = 'img1.jpg';
+	images[1] = 'img2.jpg';
+	images[2] = 'img3.jpg';
+	images[3] = 'img4.jpg';
+  images[4] = 'img5.jpg';
+  images[5] = 'img6.jpg';
+  images[6] = 'img7.jpg';
+  images[7] = 'img8.jpg';
+  images[8] = 'img9.jpg';
+  images[9] = 'img10.jpg';
+
+
+	// Change Image
+	function changeImg(){
+		document.slide.src = images[i];
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+		}
+
+		setTimeout("changeImg()", time);
+	}
+
+	window.onload = changeImg;
+
+</script>
+
+<img name="slide">
